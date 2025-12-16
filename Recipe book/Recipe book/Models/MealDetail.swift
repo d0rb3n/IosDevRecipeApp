@@ -18,6 +18,7 @@ struct MealDetail: Codable {
     let strMeal: String
     let strArea: String?
     let strInstructions: String?
+    let strMealThumb: String?
     
     let ingredients: [Ingredient]
     
@@ -26,6 +27,7 @@ struct MealDetail: Codable {
         case strMeal
         case strArea
         case strInstructions
+        case strMealThumb
     }
     
     
@@ -35,6 +37,7 @@ struct MealDetail: Codable {
         strMeal = try container.decode(String.self, forKey: .strMeal)
         strArea = try container.decodeIfPresent(String.self, forKey: .strArea)
         strInstructions = try container.decodeIfPresent(String.self, forKey: .strInstructions)
+        strMealThumb = try container.decodeIfPresent(String.self, forKey: .strMealThumb)
         
         let dynamicContainer = try decoder.container(keyedBy: DynamicCodingKeys.self)
         var tempIngredients: [Ingredient] = []

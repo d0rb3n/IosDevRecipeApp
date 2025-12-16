@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8N-j2-Yil">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t8N-j2-Yil">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cBO-1u-wfb">
-                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <rect key="frame" x="16" y="118" width="361" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="cWQ-dW-zc6" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -35,7 +35,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elite Shakshuka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNq-oY-XIK">
-                                                    <rect key="frame" x="116" y="29" width="195" height="120"/>
+                                                    <rect key="frame" x="116" y="31" width="195" height="116"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -91,52 +91,110 @@
             </objects>
             <point key="canvasLocation" x="-25.190839694656489" y="674.64788732394368"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Detail View Controller-->
         <scene sceneID="VT0-MI-u4B">
             <objects>
-                <viewController id="P7L-S9-buV" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mOA-zy-BTN">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <viewController id="P7L-S9-buV" customClass="RecipeDetailViewController" customModule="Recipe_book" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="gda-cW-8tq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="793"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Shakshuka" translatesAutoresizingMaskIntoConstraints="NO" id="aQ2-qW-dVy">
-                                <rect key="frame" x="9" y="59" width="178" height="242"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yemeni Lahsa (Elite Shakshuka)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="myf-er-Dxb">
-                                <rect key="frame" x="190" y="59" width="197" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fh-5U-V0T">
-                                <rect key="frame" x="4" y="434" width="384" height="299"/>
-                                <string key="text">1
-First, On medium heat, heat the olive oil and add the diced onion until it wethers. Next, add the tomatoes and cook for another 4-5 min. Lastly, add the all spice, salt, and cracked pepper.
-2
-Add the eggs and mix throughly for 2 minutes and cover to cook 5-6 minutes until top is solidified. Lastly, spread the liquid cheese and have it covered for a minute.
-3
-I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish salami and olives, cheese wedges, and greek feta.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Needed ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0p-vS-M9d">
-                                <rect key="frame" x="195" y="110" width="154" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hXz-gy-zA6" userLabel="ContentView">
+                                <rect key="frame" x="0.0" y="59" width="393" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="q3q-Rp-H9Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="734"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-NP-Obc">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="XJ9-vo-4Zk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CsJ-6O-ayV">
+                                                <rect key="frame" x="0.0" y="300" width="393" height="434"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="oxS-tc-36a">
+                                                        <rect key="frame" x="16" y="16" width="361" height="194.66666666666666"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecipeName" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAP-I3-3yg" userLabel="Title">
+                                                                <rect key="frame" x="0.0" y="0.0" width="361" height="28.666666666666668"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuisine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qo-XB-4rg" userLabel="Area">
+                                                                <rect key="frame" x="0.0" y="40.666666666666686" width="361" height="19.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OZ-gd-kF6" userLabel="Ingredients">
+                                                                <rect key="frame" x="0.0" y="72" width="361" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients list will appear here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-g4-ITx" userLabel="IngredientsList">
+                                                                <rect key="frame" x="0.0" y="108" width="361" height="19.333333333333329"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tt8-aF-9Li" userLabel="Instructions">
+                                                                <rect key="frame" x="0.0" y="139.33333333333337" width="361" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paf-ES-POK" userLabel="InstructionsText">
+                                                                <rect key="frame" x="0.0" y="175.33333333333337" width="361" height="19.333333333333343"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="oxS-tc-36a" firstAttribute="top" secondItem="CsJ-6O-ayV" secondAttribute="top" constant="16" id="1L2-xD-CbL"/>
+                                                    <constraint firstAttribute="bottom" secondItem="oxS-tc-36a" secondAttribute="bottom" constant="16" id="AY0-Jo-iqG"/>
+                                                    <constraint firstAttribute="trailing" secondItem="oxS-tc-36a" secondAttribute="trailing" constant="16" id="s2L-rd-CP2"/>
+                                                    <constraint firstItem="oxS-tc-36a" firstAttribute="leading" secondItem="CsJ-6O-ayV" secondAttribute="leading" constant="16" id="sIx-xe-BqI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="q3q-Rp-H9Y" secondAttribute="trailing" id="dpJ-oC-1L4"/>
+                                    <constraint firstItem="q3q-Rp-H9Y" firstAttribute="leading" secondItem="hXz-gy-zA6" secondAttribute="leading" id="hJ6-is-DxW"/>
+                                    <constraint firstItem="q3q-Rp-H9Y" firstAttribute="top" secondItem="hXz-gy-zA6" secondAttribute="top" id="mHW-ui-13y"/>
+                                    <constraint firstAttribute="bottom" secondItem="q3q-Rp-H9Y" secondAttribute="bottom" id="xzy-tZ-VZM"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="tF8-ik-5B4"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="cXG-Q9-EhM"/>
                         <constraints>
-                            <constraint firstItem="8Fh-5U-V0T" firstAttribute="leading" secondItem="mOA-zy-BTN" secondAttribute="leading" constant="9" id="kWe-gL-zFM"/>
-                            <constraint firstAttribute="trailing" secondItem="8Fh-5U-V0T" secondAttribute="trailing" constant="16" id="xgg-6r-E64"/>
+                            <constraint firstItem="hXz-gy-zA6" firstAttribute="top" secondItem="cXG-Q9-EhM" secondAttribute="top" id="379-SC-03n"/>
+                            <constraint firstItem="lcv-a0-NBu" firstAttribute="trailing" secondItem="hXz-gy-zA6" secondAttribute="trailing" id="Csu-jg-i7H"/>
+                            <constraint firstItem="lcv-a0-NBu" firstAttribute="bottom" secondItem="hXz-gy-zA6" secondAttribute="bottom" id="DOo-4t-rkt"/>
+                            <constraint firstItem="hXz-gy-zA6" firstAttribute="width" secondItem="gda-cW-8tq" secondAttribute="width" id="DqH-Zh-K2d"/>
+                            <constraint firstItem="hXz-gy-zA6" firstAttribute="leading" secondItem="lcv-a0-NBu" secondAttribute="leading" id="Vxw-MV-0fm"/>
                         </constraints>
-                    </view>
+                        <viewLayoutGuide key="contentLayoutGuide" id="VPf-7D-cuS"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="lcv-a0-NBu"/>
+                    </scrollView>
+                    <connections>
+                        <outlet property="areaLabel" destination="5qo-XB-4rg" id="Jg2-GM-nAP"/>
+                        <outlet property="ingredientsLabel" destination="mQT-g4-ITx" id="q9t-kV-sxC"/>
+                        <outlet property="instructionsLabel" destination="paf-ES-POK" id="wdC-Ug-e80"/>
+                        <outlet property="mealImageView" destination="eGG-NP-Obc" id="Gis-St-1RY"/>
+                        <outlet property="scrollView" destination="gda-cW-8tq" id="beS-pX-50L"/>
+                        <outlet property="titleLabel" destination="hAP-I3-3yg" id="WDv-hd-nua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="naC-UG-JV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,7 +230,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-Dl-1pt">
-                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <rect key="frame" x="16" y="118" width="361" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="nSK-MI-9G3" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -190,7 +248,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elite Shakshuka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GvE-0O-o24">
-                                                    <rect key="frame" x="116" y="29" width="195" height="120"/>
+                                                    <rect key="frame" x="116" y="31" width="195" height="116"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -255,7 +313,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-BA-lhJ">
-                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <rect key="frame" x="16" y="118" width="361" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="0FH-PY-N0G" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -273,7 +331,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elite Shakshuka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKj-Wd-adz">
-                                                    <rect key="frame" x="116" y="29" width="195" height="120"/>
+                                                    <rect key="frame" x="116" y="31" width="195" height="116"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -332,13 +390,13 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
         <!--Saved-->
         <scene sceneID="Kjn-8d-g2L">
             <objects>
-                <viewController id="1dg-Pt-Bav" customClass="RecipeCategoryViewController" customModule="Recipe_book" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1dg-Pt-Bav" customClass="FavoritesViewController" customModule="Recipe_book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8lk-fd-4lD">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gxc-e2-hiN">
-                                <rect key="frame" x="16" y="59" width="361" height="710"/>
+                                <rect key="frame" x="16" y="118" width="361" height="617"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="rw0-7x-fYj" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -356,7 +414,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elite Shakshuka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWa-H3-TsH">
-                                                    <rect key="frame" x="116" y="29" width="195" height="120"/>
+                                                    <rect key="frame" x="116" y="31" width="195" height="116"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -404,7 +462,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
                     </view>
                     <tabBarItem key="tabBarItem" title="Saved" image="heart.fill" catalog="system" selectedImage="heart.fill" id="Oal-nH-DnI"/>
                     <connections>
-                        <outlet property="tableView" destination="gxc-e2-hiN" id="aC7-fc-Ceo"/>
+                        <outlet property="tableView" destination="gxc-e2-hiN" id="qnI-zI-vR0"/>
                         <segue destination="P7L-S9-buV" kind="showDetail" identifier="ShowRecipeDetail" id="o6A-gT-2pg"/>
                     </connections>
                 </viewController>
@@ -414,7 +472,7 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="opD-wq-LHB"/>
+        <segue reference="iJu-0r-fcC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Shakshuka" width="233.33332824707031" height="233.33332824707031"/>
@@ -423,6 +481,9 @@ I served mine Mediterranean style with hash-browns, Egyptian fava beans, Turkish
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="leaf.fill" catalog="system" width="128" height="109"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
