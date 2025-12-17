@@ -47,7 +47,7 @@ class RecipeDetailViewController: UIViewController {
         }
     }
     
-    private func configure(with meal: MealDetail) {
+    private func configure(with meal: MealDetail){
         titleLabel.text = meal.strMeal
         
         if let area = meal.strArea, !area.isEmpty {
@@ -59,11 +59,7 @@ class RecipeDetailViewController: UIViewController {
 
         if let imageURLString = meal.strMealThumb,
            let imageURL = URL(string: imageURLString) {
-            mealImageView.kf.setImage(
-                with: imageURL,
-                placeholder: UIImage(systemName: "photo"),
-                options: [.transition(.fade(0.2))]
-            )
+            mealImageView.kf.setImage(with: imageURL)
         }
 
         var ingredientsText = ""
@@ -82,8 +78,6 @@ class RecipeDetailViewController: UIViewController {
             instructionsTextView.text = "No instructions available"
         }
 
-        view.setNeedsLayout()
-        view.layoutIfNeeded()
     }
     
     private func showError(_ message: String) {

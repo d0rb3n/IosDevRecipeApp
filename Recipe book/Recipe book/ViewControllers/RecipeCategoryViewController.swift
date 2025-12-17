@@ -23,10 +23,15 @@ class RecipeCategoryViewController: UIViewController, UISearchBarDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        determineCategoryFromTab()
         setupTableView()
         setupSearchBar()
         loadMeals()
     }
+
+    private func determineCategoryFromTab() {
+        category = tabBarItem.title ?? "Breakfast"
+        }
     
     private func setupTableView(){
         tableView.delegate = self

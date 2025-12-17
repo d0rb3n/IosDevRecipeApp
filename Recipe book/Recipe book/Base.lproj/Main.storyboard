@@ -91,6 +91,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Breakfast" image="fork.knife" catalog="system" selectedImage="fork.knife" id="hTM-u9-y3T"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="category" value="Breakfast"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="searchBar" destination="Z6k-M6-Wgm" id="44w-kE-eZ4"/>
                         <outlet property="tableView" destination="cBO-1u-wfb" id="hHO-VH-TfV"/>
@@ -204,6 +207,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Starter" image="leaf.fill" catalog="system" selectedImage="leaf.fill" id="b20-fj-43V"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="category" value="Starter"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="searchBar" destination="g4x-kC-8s4" id="SDt-9h-gts"/>
                         <outlet property="tableView" destination="Y3b-Dl-1pt" id="wrT-uI-hjE"/>
@@ -296,6 +302,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dessert" image="birthday.cake.fill" catalog="system" selectedImage="birthday.cake.fill" id="5Oq-KL-ofh"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="category" value="Dessert"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="searchBar" destination="Do5-XX-QfJ" id="pND-0q-cyc"/>
                         <outlet property="tableView" destination="MUZ-BA-lhJ" id="8a5-Dv-c95"/>
@@ -449,12 +458,6 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="f0f-dE-KBe" firstAttribute="leading" secondItem="Rk9-1D-uND" secondAttribute="leading" constant="12" id="Qbg-rh-bYd"/>
-                                            <constraint firstAttribute="trailing" secondItem="f0f-dE-KBe" secondAttribute="trailing" constant="12" id="Tlb-we-8Bv"/>
-                                            <constraint firstItem="f0f-dE-KBe" firstAttribute="top" secondItem="qz2-x7-J9k" secondAttribute="bottom" constant="8" symbolic="YES" id="kBY-zn-ANb"/>
-                                            <constraint firstItem="PYU-ab-ppw" firstAttribute="top" secondItem="f0f-dE-KBe" secondAttribute="bottom" constant="8" symbolic="YES" id="z8h-dW-T1A"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
