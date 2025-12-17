@@ -28,7 +28,11 @@ class RecipeCategoryViewController: UIViewController, UISearchBarDelegate{
         setupSearchBar()
         loadMeals()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
+    
     private func determineCategoryFromTab() {
         category = tabBarItem.title ?? "Breakfast"
         }
@@ -43,8 +47,7 @@ class RecipeCategoryViewController: UIViewController, UISearchBarDelegate{
     }
     
     private func loadMeals() {
-        APIService.shared.fetchMealsByCategory(category: category) { [weak self] result in
-            DispatchQueue.main.async {
+        APIService.shared.fetchMealsByCategory(category: category){ [weak self] result in DispatchQueue.main.async {
                 switch result {
                 case .success(let meals):
                     self?.allMeals = meals
@@ -58,7 +61,7 @@ class RecipeCategoryViewController: UIViewController, UISearchBarDelegate{
         }
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){//et while typing
         if searchText.isEmpty{
             isSearching = false
             filteredMeals = allMeals
@@ -103,7 +106,7 @@ class RecipeCategoryViewController: UIViewController, UISearchBarDelegate{
 extension RecipeCategoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        if filteredMeals.isEmpty && isSearching {
+        if filteredMeals.isEmpty && isSearching{
             return 1
         }
         return filteredMeals.count
@@ -112,10 +115,6 @@ extension RecipeCategoryViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         if filteredMeals.isEmpty && isSearching {
             let cell = UITableViewCell()
-            cell.textLabel?.text = "Not Found"
-            cell.textLabel?.textAlignment = .center
-            cell.textLabel?.textColor = .secondaryLabel
-            cell.selectionStyle = .none
             return cell
         }
         

@@ -77,7 +77,6 @@ class RecipeDetailViewController: UIViewController {
         } else {
             instructionsTextView.text = "No instructions available"
         }
-
     }
     
     private func showError(_ message: String) {
