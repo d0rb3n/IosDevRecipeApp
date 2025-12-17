@@ -51,4 +51,20 @@ class APIService {
                 
             }
     }
+    
+    func searchMealByName(query: String, completion: @escaping (Result<[CategoryMeals], Error>) -> Void) {
+        let url = "\(baseURL)/search.php"
+        let parameters: Parameters = ["s": query]
+        
+        AF.request(url, parameters: parameters)
+            .validate()
+            .responseDecodable(of: CategoryMealsResponse.self) { response in
+                switch response.result {
+                case .success(let data):
+                    completion(.success(data.meals ?? []))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
+            }
+    }
 }

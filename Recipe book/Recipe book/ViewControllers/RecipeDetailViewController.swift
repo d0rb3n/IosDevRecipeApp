@@ -22,27 +22,7 @@ class RecipeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupUI()
         loadMealDetail()
-    }
-    
-    private func setupUI() {
-        scrollView.isScrollEnabled = true
-        scrollView.showsVerticalScrollIndicator = true
-        
-        mealImageView.contentMode = .scaleAspectFill
-        mealImageView.clipsToBounds = true
-        
-        titleLabel.numberOfLines = 0
-        areaLabel.numberOfLines = 0
-        ingredientsLabel.numberOfLines = 0
-        
-        instructionsTextView.isEditable = false
-        instructionsTextView.isSelectable = true
-        instructionsTextView.isScrollEnabled = false
-        instructionsTextView.textContainerInset = .zero
-        instructionsTextView.textContainer.lineFragmentPadding = 0
-        instructionsTextView.backgroundColor = .clear
     }
     
     private func loadMealDetail() {

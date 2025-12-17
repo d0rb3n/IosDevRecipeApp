@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cBO-1u-wfb">
-                                <rect key="frame" x="16" y="118" width="361" height="617"/>
+                                <rect key="frame" x="16" y="168" width="361" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="cWQ-dW-zc6" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -73,18 +73,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" text="" placeholder="Search recipes..." translatesAutoresizingMaskIntoConstraints="NO" id="Z6k-M6-Wgm">
+                                <rect key="frame" x="0.0" y="118" width="393" height="50"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
+                            <constraint firstItem="cBO-1u-wfb" firstAttribute="top" secondItem="Z6k-M6-Wgm" secondAttribute="bottom" id="2vV-gB-Fmx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cBO-1u-wfb" secondAttribute="trailing" id="9Ac-3N-CpI"/>
-                            <constraint firstItem="cBO-1u-wfb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="AK7-LK-cA7"/>
+                            <constraint firstItem="cBO-1u-wfb" firstAttribute="top" secondItem="Z6k-M6-Wgm" secondAttribute="topMargin" constant="42" id="AK7-LK-cA7"/>
+                            <constraint firstItem="Z6k-M6-Wgm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qj5-5K-jGS"/>
                             <constraint firstItem="cBO-1u-wfb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YjL-7M-Ofl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cBO-1u-wfb" secondAttribute="bottom" id="gb2-4r-wbN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z6k-M6-Wgm" secondAttribute="trailing" id="tue-25-SIs"/>
+                            <constraint firstItem="Z6k-M6-Wgm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zmc-XD-mjK"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Breakfast" image="fork.knife" catalog="system" selectedImage="fork.knife" id="hTM-u9-y3T"/>
                     <connections>
-                        <outlet property="tableView" destination="cBO-1u-wfb" id="G1g-ci-y5E"/>
+                        <outlet property="searchBar" destination="Z6k-M6-Wgm" id="44w-kE-eZ4"/>
+                        <outlet property="tableView" destination="cBO-1u-wfb" id="hHO-VH-TfV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,7 +130,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-Dl-1pt">
-                                <rect key="frame" x="16" y="118" width="361" height="617"/>
+                                <rect key="frame" x="16" y="168" width="361" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="nSK-MI-9G3" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -177,23 +186,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" text="" placeholder="Search recipes..." translatesAutoresizingMaskIntoConstraints="NO" id="g4x-kC-8s4">
+                                <rect key="frame" x="0.0" y="118" width="393" height="50"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v6t-q5-Svu"/>
                         <constraints>
+                            <constraint firstItem="g4x-kC-8s4" firstAttribute="leading" secondItem="v6t-q5-Svu" secondAttribute="leading" id="2Bz-hF-i4A"/>
+                            <constraint firstItem="g4x-kC-8s4" firstAttribute="top" secondItem="v6t-q5-Svu" secondAttribute="top" id="4kk-ZD-52X"/>
                             <constraint firstItem="v6t-q5-Svu" firstAttribute="bottom" secondItem="Y3b-Dl-1pt" secondAttribute="bottom" id="95g-XI-l2Q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Y3b-Dl-1pt" secondAttribute="trailing" id="K5U-QI-iAX"/>
                             <constraint firstItem="Y3b-Dl-1pt" firstAttribute="leading" secondItem="tHW-UL-Hrt" secondAttribute="leadingMargin" id="Sfn-mY-7kD"/>
-                            <constraint firstItem="Y3b-Dl-1pt" firstAttribute="top" secondItem="tHW-UL-Hrt" secondAttribute="topMargin" id="zIL-bV-ocY"/>
+                            <constraint firstItem="Y3b-Dl-1pt" firstAttribute="top" secondItem="g4x-kC-8s4" secondAttribute="bottom" id="XF8-iK-rrm"/>
+                            <constraint firstItem="g4x-kC-8s4" firstAttribute="trailing" secondItem="v6t-q5-Svu" secondAttribute="trailing" id="thc-qU-P0a"/>
+                            <constraint firstItem="Y3b-Dl-1pt" firstAttribute="top" secondItem="g4x-kC-8s4" secondAttribute="topMargin" constant="42" id="zIL-bV-ocY"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Starter" image="leaf.fill" catalog="system" selectedImage="leaf.fill" id="b20-fj-43V"/>
                     <connections>
+                        <outlet property="searchBar" destination="g4x-kC-8s4" id="SDt-9h-gts"/>
                         <outlet property="tableView" destination="Y3b-Dl-1pt" id="wrT-uI-hjE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HGz-cW-I6a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="675"/>
+            <point key="canvasLocation" x="1336.6412213740457" y="674.64788732394368"/>
         </scene>
         <!--Dessert-->
         <scene sceneID="GSZ-2J-hXD">
@@ -204,7 +222,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MUZ-BA-lhJ">
-                                <rect key="frame" x="16" y="118" width="361" height="617"/>
+                                <rect key="frame" x="16" y="168" width="361" height="567"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MealCell" rowHeight="178" id="0FH-PY-N0G" customClass="MealTableViewCell" customModule="Recipe_book" customModuleProvider="target">
@@ -260,23 +278,32 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search recipes..." translatesAutoresizingMaskIntoConstraints="NO" id="Do5-XX-QfJ">
+                                <rect key="frame" x="0.0" y="118" width="393" height="50"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NK6-7m-gUt"/>
                         <constraints>
+                            <constraint firstItem="Do5-XX-QfJ" firstAttribute="top" secondItem="NK6-7m-gUt" secondAttribute="top" id="HOX-Bf-Zvb"/>
                             <constraint firstItem="MUZ-BA-lhJ" firstAttribute="leading" secondItem="QQ4-7T-JdY" secondAttribute="leadingMargin" id="M1H-kz-77l"/>
+                            <constraint firstItem="Do5-XX-QfJ" firstAttribute="trailing" secondItem="NK6-7m-gUt" secondAttribute="trailing" id="cwh-Kv-5vt"/>
                             <constraint firstItem="NK6-7m-gUt" firstAttribute="bottom" secondItem="MUZ-BA-lhJ" secondAttribute="bottom" id="ieY-PG-Gdh"/>
-                            <constraint firstItem="MUZ-BA-lhJ" firstAttribute="top" secondItem="QQ4-7T-JdY" secondAttribute="topMargin" id="xym-Jf-m5Z"/>
+                            <constraint firstItem="Do5-XX-QfJ" firstAttribute="leading" secondItem="NK6-7m-gUt" secondAttribute="leading" id="ki5-cs-hOP"/>
+                            <constraint firstItem="MUZ-BA-lhJ" firstAttribute="top" secondItem="Do5-XX-QfJ" secondAttribute="bottom" id="v2m-nx-aYh"/>
+                            <constraint firstItem="MUZ-BA-lhJ" firstAttribute="top" secondItem="Do5-XX-QfJ" secondAttribute="topMargin" constant="42" id="xym-Jf-m5Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MUZ-BA-lhJ" secondAttribute="trailing" id="yM6-kb-0Re"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dessert" image="birthday.cake.fill" catalog="system" selectedImage="birthday.cake.fill" id="5Oq-KL-ofh"/>
                     <connections>
+                        <outlet property="searchBar" destination="Do5-XX-QfJ" id="pND-0q-cyc"/>
                         <outlet property="tableView" destination="MUZ-BA-lhJ" id="8a5-Dv-c95"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XY5-HB-Z0t" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="675"/>
+            <point key="canvasLocation" x="652.67175572519079" y="674.64788732394368"/>
         </scene>
         <!--Saved-->
         <scene sceneID="Kjn-8d-g2L">
@@ -383,6 +410,9 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0f-dE-KBe">
                                                 <rect key="frame" x="0.0" y="312" width="393" height="28.666666666666686"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="380" id="Tij-oP-5hu"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -411,7 +441,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Instruction TEXT" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sgm-fM-Z3k">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="InstructionText" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Sgm-fM-Z3k">
                                                 <rect key="frame" x="0.0" y="487.33333333333337" width="393" height="35.333333333333371"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>
@@ -419,6 +449,12 @@
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="f0f-dE-KBe" firstAttribute="leading" secondItem="Rk9-1D-uND" secondAttribute="leading" constant="12" id="Qbg-rh-bYd"/>
+                                            <constraint firstAttribute="trailing" secondItem="f0f-dE-KBe" secondAttribute="trailing" constant="12" id="Tlb-we-8Bv"/>
+                                            <constraint firstItem="f0f-dE-KBe" firstAttribute="top" secondItem="qz2-x7-J9k" secondAttribute="bottom" constant="8" symbolic="YES" id="kBY-zn-ANb"/>
+                                            <constraint firstItem="PYU-ab-ppw" firstAttribute="top" secondItem="f0f-dE-KBe" secondAttribute="bottom" constant="8" symbolic="YES" id="z8h-dW-T1A"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -456,7 +492,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uuA-r6-kKf"/>
+        <segue reference="TYv-lW-ncH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Shakshuka" width="233.33332824707031" height="233.33332824707031"/>
